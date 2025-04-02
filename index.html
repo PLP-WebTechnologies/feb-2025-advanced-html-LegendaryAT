@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon Link after downloading the code change the Icon's directory to yours-->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/4413/4413488.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humphrey Atang Lekhoba</title>
+
+    <style>
+        /* Background Video Styling */
+        video#bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Places video behind content */
+        }
+        /* Ensure content is readable over video */
+        main, footer {
+            position: relative;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .fixed-size-img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Background Video -->
+     <video id="bg-video" autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/10741100/10741100-sd_640_360_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Header Section -->
+    <header>
+        <h1>Humphrey's Train Ticket Booking System</h1>
+    </header>
+    <!--after downloading the code Change the image's directory to yours-->
+    <img src="https://images.pexels.com/photos/31321583/pexels-photo-31321583/free-photo-of-winter-snowfall-at-shinjuku-train-station.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"alt="Description of image" width="300" height="300">
+
+       <!-- Text Input Field -->
+       <h2>Enter Your Information to check if you are an existing client</h2>
+       <form>
+           <label for="user-input">Your Name:</label>
+           <input type="text" id="user-input" name="user-input" placeholder="Type your name here">
+       </form>
+    <!-- Main Content Section -->
+    <main>
+        <!-- Ordered List with Roman Numerals -->
+        <h2>Steps to Get Started</h2>
+        <ol type="I">
+           <li>Sign Up</li>
+           <li>Verify Your Email</li>
+           <li>Explore the Features</li>
+           <li>Contact Support if Needed</li>
+           <li>Sign In to complete the application</li>
+        </ol>
+         <!-- Contact Table -->
+        <h2>Registered Passengers</h2>
+            <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abongile Dube</td>
+                    <td>26 Zulul Street, Midrand</td>
+                    <td><a href="tel:+27761584158">+27 (076) 158 4158</a></td>
+                    <td><a href="abongile.dube@gmail.com">abongile.dube@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Oak Ave, Rivertown</td>
+                    <td><a href="tel:+15559876543">+1 (555) 987-6543</a></td>
+                    <td><a href="mailto:jane.smith@example.com">jane.smith@example.com</a></td>
+                </tr>
+                <tr>
+                    <td>Mike Johnson</td>
+                    <td>789 Pine Rd, Hillcity</td>
+                    <td><a href="tel:+15554443322">+1 (555) 444-3322</a></td>
+                    <td><a href="mailto:mike.j@example.com">mike.j@example.com</a></td>
+                </tr>
+                <tr>
+                    <td>Emily Brown</td>
+                    <td>321 Elm St, Lakeside</td>
+                    <td><a href="tel:+15556667788">+1 (555) 666-7788</a></td>
+                    <td><a href="mailto:emily.brown@example.com">emily.brown@example.com</a></td>
+                </tr>
+                <tr>
+                    <td>David Lee</td>
+                    <td>654 Cedar Ln, Mountainview</td>
+                    <td><a href="tel:+15559998877">+1 (555) 999-8877</a></td>
+                    <td><a href="mailto:david.lee@example.com">david.lee@example.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+         
+
+          <!-- Registration Form -->
+        <h2>Register Now</h2>
+        <form action="/submit" method="post">
+            <!-- Name Field -->
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <!-- Email Field -->
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+            <!-- Password Field -->
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" 
+                   minlength="8" required>
+
+            <!-- Date of Birth Field -->
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+
+            <!-- Dropdown: Country -->
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="us">South Africa</option>
+                <option value="uk">DR Congo</option>
+                <option value="ca">Ughanda</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Radio Buttons: Account Type -->
+            <fieldset>
+                <legend>Account Type *</legend>
+                <label>
+                    <input type="radio" name="account-type" value="personal" required> Personal
+                </label>
+                <label>
+                    <input type="radio" name="account-type" value="business"> Business
+                </label>
+            </fieldset>
+
+            <!-- Checkboxes: Interests -->
+            <fieldset>
+                <legend>Interests</legend>
+                <label>
+                    <input type="checkbox" name="interests" value="tech"> Big Data
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="sports"> Sports
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="music"> Music
+                </label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register">
+        </form>
+         
+    </main>
+
+   <!-- Footer Section -->
+<footer>
+    <!-- Contact Information Container -->
+    <div class="contact-info">
+        <h3>Contact Me</h3>
+        <p>
+            Email: <a href="atang.lekhoba@gmail.com">atang.lekhoba@gmail.com</a>
+        </p>
+        <p>
+            Phone: <a href="tel:+1234567890">+27 (071) 313-6205</a>
+        </p>
+        <p>
+            Address: 09 Lindos President Park, JHB, RSA 1685
+        </p>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="copyright">
+        <p>&copy; 2025 Legendary Connect Solutions. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
